@@ -4,6 +4,9 @@ public class VisualException extends Throwable
 {
     /**
      *
+     * 
+     * 
+     * 
      */
     private static final long serialVersionUID = 1L;
     
