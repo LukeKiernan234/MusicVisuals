@@ -37,4 +37,21 @@ public class VilimsVisual extends Visual {
         
     }
     
+
+    public void draw()
+    {
+        calculateAverageAmplitude();
+        try
+        {
+            calculateFFT();
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        }
+
+        
+
+
+    }
 }
