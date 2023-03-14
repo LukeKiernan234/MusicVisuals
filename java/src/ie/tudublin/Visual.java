@@ -107,6 +107,10 @@ public abstract class Visual extends PApplet
 		this.sampleRate = sampleRate;
 	}
 
+	public float[] setBands(float[] bands) {
+		return bands;
+	}
+
 	public float[] getBands() {
 		return bands;
 	}
