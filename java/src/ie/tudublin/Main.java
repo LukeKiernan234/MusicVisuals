@@ -1,6 +1,5 @@
 package ie.tudublin;
 
-import c21737525.GroupVisual;
 import c21737525.VilimsVisual;
 import example.CubeVisual;
 import example.MyVisual;

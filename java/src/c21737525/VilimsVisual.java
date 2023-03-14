@@ -1,6 +1,6 @@
 package c21737525;
 
-import processing.core.*;
+import ie.tudublin.*;
 
 public class VilimsVisual
 {
@@ -28,10 +28,10 @@ public class VilimsVisual
         int stick = 300; //length of the line
         
         for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8){
-            float cirRadius = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
+            float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
             float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
-            float f = gv.lerpedBuffer[i] * gv.halfHeight * 4.0f;
+            float f = gv.getLerpedBuffer()[i] * gv.getHalfHeight() * 4.0f;
             
             gv.stroke(c, 255, 255);
             gv.strokeWeight(5);

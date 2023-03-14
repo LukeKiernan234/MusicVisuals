@@ -1,4 +1,6 @@
-package c21737525;
+package ie.tudublin;
+
+import c21737525.*;
 
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -8,9 +10,9 @@ import ie.tudublin.*;
 
 public class GroupVisual extends Visual {
 
-    float[] lerpedBuffer;
-    float[] lerpedBuffer2;
-    float halfHeight = height / 2;
+    private float[] lerpedBuffer;
+    private float[] lerpedBuffer2;
+    private float halfHeight = height / 2;
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual
 
@@ -43,7 +45,6 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
-
     }
 
 
@@ -75,4 +76,32 @@ public class GroupVisual extends Visual {
     }
 
     
+
+
+
+    public float[] getLerpedBuffer() {
+        return lerpedBuffer;
+    }
+
+    public void setLerpedBuffer(float[] lerpedBuffer) {
+        this.lerpedBuffer = lerpedBuffer;
+    }
+
+    public float[] getLerpedBuffer2() {
+        return lerpedBuffer2;
+    }
+
+    public void setLerpedBuffer2(float[] lerpedBuffer2) {
+        this.lerpedBuffer2 = lerpedBuffer2;
+    }
+
+    public float getHalfHeight() {
+        return halfHeight;
+    }
+
+    public void setHalfHeight(float halfHeight) {
+        this.halfHeight = halfHeight;
+    }
+
+
 }
