@@ -10,6 +10,7 @@ public class GroupVisual extends Visual {
 
     float[] lerpedBuffer;
     float[] lerpedBuffer2;
+    float halfHeight = height / 2;
 
     int visual = 0; // 0 = Vilims, 1 = Cube, 2 = RotatingAudioBands, 3 = MyVisual
 

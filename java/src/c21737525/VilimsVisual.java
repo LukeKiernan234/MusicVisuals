@@ -29,10 +29,11 @@ public class VilimsVisual
             float cirRadius = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
             float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
+            float f = gv.lerpedBuffer[i] * gv.halfHeight * 4.0f;
             
             gv.stroke(c, 255, 255);
-            gv.strokeWeight(3);
-            gv.line(gv.sin(cirRadius) * radius, gv.cos(cirRadius) * radius, gv.sin(cirRadius) * (stickLong + radius), gv.cos(cirRadius) * (stickLong + radius));
+            gv.strokeWeight(5);
+            gv.line(gv.sin(cirRadius) * radius, (gv.cos(cirRadius) * radius) + f, gv.sin(cirRadius) * (stickLong + radius), (gv.cos(cirRadius) * (stickLong + radius)) - f);
             // on each end of line, add a curvy line
             gv.noFill();
             gv.arc(gv.sin(cirRadius) * (stickLong + radius), gv.cos(cirRadius) * (stickLong + radius), 15, 15, 0, gv.PI);
@@ -49,7 +50,7 @@ public class VilimsVisual
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255);
            gv.stroke(c, 255, 255);
            gv.strokeWeight(3);
-           gv.line(gv.sin(cirRadius) * radius2, gv.cos(cirRadius) * radius2, gv.sin(cirRadius) * (stickLong + radius2), gv.cos(cirRadius) * (stickLong + radius2));
+           gv.line(gv.sin(cirRadius) * radius2, gv.cos(cirRadius) * radius2, (gv.sin(cirRadius) * (stickLong + radius2))*-1, (gv.cos(cirRadius) * (stickLong + radius2)) );
        }
 
 
