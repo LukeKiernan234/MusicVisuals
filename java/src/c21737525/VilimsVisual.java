@@ -33,46 +33,26 @@ public class VilimsVisual
         for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8)
         {
             float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
-            float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
+            float stickGrow = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
             float f = gv.getLerpedBuffer()[i] * gv.getHalfHeight() * 4.0f;
             
             gv.stroke(c, 255, 255);
             gv.strokeWeight(5);
-            gv.line(gv.sin(cirRadius) * radius, (gv.cos(cirRadius) * radius) + f, gv.sin(cirRadius) * (stickLong + radius), (gv.cos(cirRadius) * (stickLong + radius)) - f);
+            gv.line(gv.sin(cirRadius) * radius, (gv.cos(cirRadius) * radius) + f, gv.sin(cirRadius) * (stickGrow + radius), (gv.cos(cirRadius) * (stickGrow + radius)) - f);
             // on each end of line, add a curvy line
             gv.noFill();
-            gv.arc(gv.sin(cirRadius) * (stickLong + radius), gv.cos(cirRadius) * (stickLong + radius), 15, 15, 0, gv.PI); //place half circle at the end of each line 
+            gv.arc(gv.sin(cirRadius) * (stickGrow + radius), gv.cos(cirRadius) * (stickGrow + radius), 15, 15, 0, gv.PI); //place half circle at the end of each line 
         }
 
-        
-        int radius2 = 100; //the size of the circle (radius)
-        int stick2 = 100; //length of the line
-        
-        for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8)
-        {
-            float cirRadius = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); //the place of each line of the circle
-            float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick2; //length of the line
-            // full range of the color based on the amplitude of the sound
-            float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255);
-            gv.stroke(c, 255, 255);
-            gv.strokeWeight(3);
-            //gv.line(gv.sin(cirRadius) * radius2, gv.cos(cirRadius) * radius2, (gv.sin(cirRadius) * (stickLong + radius2))*-1, (gv.cos(cirRadius) * (stickLong + radius2)) );
-        }
-
-
-        
-        // //create a sphere
-        // gv.lights();
-        // //gv.rotateX(gv.frameCount * 0.01f);
-        // gv.rotateY(gv.frameCount * 0.05f);
-        // gv.noFill();
-        // // get the color based on the bands
-        // float c = PApplet.map(gv.getBands()[0], 0, 255, 0, 255);
-        // gv.stroke(c, 255, 255);
-        // gv.strokeWeight(2);
-        // gv.sphereDetail(8, 16);
-        // gv.sphere(100);
+        //center sphere
+        gv.lights();
+        gv.rotateY(gv.getSmoothedAmplitude() * 2); // rotate the sphere based on the amplitude of the sound
+        gv.noFill();
+        gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        gv.strokeWeight(2);
+        gv.sphereDetail(8, 16);
+        gv.sphere(100);
 
 
 

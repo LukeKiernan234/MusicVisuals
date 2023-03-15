@@ -60,9 +60,11 @@ public class VilimsSphere extends Visual {
 
         }
 
-        // middle sphere, rotates based on the amplitude of the sound, reverse direction
+        // middle sphere, rotates based on the amplitude of the sound
         gv.pushMatrix();
-        gv.sphereDetail(8, 16);
+        // change color of the sphere every frame based on amplitude
+        gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        gv.sphereDetail(16, 16);
         gv.rotateY(gv.getAmplitude() * 2);
         gv.sphere(100);
         gv.popMatrix();
