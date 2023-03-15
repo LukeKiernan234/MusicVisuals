@@ -27,7 +27,8 @@ public class VilimsVisual
         int radius = 300; //the size of the circle (radius)
         int stick = 300; //length of the line
         
-        for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8){
+        for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8)
+        {
             float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
             float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
@@ -45,14 +46,15 @@ public class VilimsVisual
         int radius2 = 100; //the size of the circle (radius)
         int stick2 = 100; //length of the line
         
-        for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8){
+        for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8)
+        {
             float cirRadius = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); //the place of each line of the circle
             float stickLong = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick2; //length of the line
             // full range of the color based on the amplitude of the sound
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255);
-           gv.stroke(c, 255, 255);
-           gv.strokeWeight(3);
-           gv.line(gv.sin(cirRadius) * radius2, gv.cos(cirRadius) * radius2, (gv.sin(cirRadius) * (stickLong + radius2))*-1, (gv.cos(cirRadius) * (stickLong + radius2)) );
+            gv.stroke(c, 255, 255);
+            gv.strokeWeight(3);
+            gv.line(gv.sin(cirRadius) * radius2, gv.cos(cirRadius) * radius2, (gv.sin(cirRadius) * (stickLong + radius2))*-1, (gv.cos(cirRadius) * (stickLong + radius2)) );
        }
 
 
