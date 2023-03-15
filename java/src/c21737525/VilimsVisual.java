@@ -47,12 +47,12 @@ public class VilimsVisual
 
         //center sphere
         gv.lights();
-        gv.rotateY(gv.getSmoothedAmplitude() * 2); // rotate the sphere based on the amplitude of the sound
+        gv.rotateY(gv.getSmoothedAmplitude() * 10 ); // rotate the sphere based on the amplitude of the sound
         gv.noFill();
         gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         gv.strokeWeight(2);
-        gv.sphereDetail(8, 16);
-        gv.sphere(100);
+        gv.sphereDetail(32, 32);
+        gv.sphere(250);
 
 
 
