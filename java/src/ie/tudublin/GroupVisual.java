@@ -16,9 +16,9 @@ public class GroupVisual extends Visual {
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual
 
-
     // create the visuals here
     VilimsVisual vv = new VilimsVisual(this);
+    VilimsSphere vs = new VilimsSphere(this);
 
     public void settings() {
         size(1024, 768, P3D);
@@ -32,6 +32,19 @@ public class GroupVisual extends Visual {
             getAudioPlayer().play();
 
         }
+        if (key == '1') {
+            visual = 0;
+        }
+        if (key == '2') {
+            visual = 1;
+        }
+        if (key == '3') {
+            visual = 2;
+        }
+        if (key == '4') {
+            visual = 3;
+        }
+
 
     }
 
@@ -67,6 +80,7 @@ public class GroupVisual extends Visual {
                 vv.render();
                 break;
             case 1:
+                vs.render();
                 break;
             case 2:
                 break;
