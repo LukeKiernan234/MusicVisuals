@@ -20,12 +20,7 @@ public class VilimsVisual
         // reset the camera
         gv.camera();
         gv.translate(gv.width / 2, gv.height / 2); // move the origin to the center of the screen
-        gv.getFFT().forward(gv.getAudioBuffer()); // get the FFT data for the current frame
         gv.pushMatrix(); // push the current transformation matrix onto the stack
-        gv.setBands(gv.getFFT().getSpectrumReal()); // get the average amplitude for each band
-
-
-
 
         int radius = 300; //the size of the circle (radius)
         int stick = 300; //length of the line
@@ -53,11 +48,6 @@ public class VilimsVisual
         gv.strokeWeight(2);
         gv.sphereDetail(32, 32);
         gv.sphere(250);
-
-
-
-
-
 
         // pop the transformation matrix off the stack
         gv.popMatrix(); 
