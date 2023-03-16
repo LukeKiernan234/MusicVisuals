@@ -30,9 +30,7 @@ public class VilimsSphere extends Visual {
 
     
         gv.translate(gv.width / 2, gv.height / 2); // move the origin to the center of the screen
-        //gv.getFFT().forward(gv.getAudioBuffer()); // get the FFT data for the current frame
-        gv.setBands(gv.getFFT().getSpectrumReal()); // get the average amplitude for each band
-
+        
         gv.stroke(255);
         gv.lights();
         gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
