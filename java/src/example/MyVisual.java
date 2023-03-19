@@ -6,10 +6,13 @@ public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
+    scene1 s1;
+    scene2 s2;
+    RotatingAudioBands rt;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1024, 1024,P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -23,15 +26,19 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        //loadAudio("heroplanet.mp3");   
+        loadAudio("heroplanet.mp3");
 
         
         // Call this instead to read audio from the microphone
-        startListening(); 
+        //startListening(); 
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        s1 = new scene1(this);
+        s2 = new scene2(this);
+        s2.createbox(100);
     }
+
 
     public void keyPressed()
     {
@@ -59,7 +66,9 @@ public class MyVisual extends Visual
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        wf.render();
-        abv.render();
+        // wf.render();
+        // abv.render();
+        s1.render();
+        //s2.render();
     }
 }
