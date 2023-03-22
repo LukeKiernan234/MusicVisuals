@@ -11,6 +11,7 @@ public class cube {
     private float speed;
     private float rotang;
     private float color;
+    private float colorchange;
 
     //setter
     public void setZ(float z) {
@@ -43,15 +44,19 @@ public class cube {
         this.speed = 10;
         this.rotang = 0;
         this.color = color;
+        this.colorchange = 0;
     }
 
+    public void setColorchange(float colorchange) {
+        this.colorchange = colorchange;
+    }
 
     public void render(GroupVisual gv)
     {
 
         gv.camera();
 
-        //gv.translate(gv.width / 2, gv.height / 2, z/2 ); // move the origin to the center of the screen
+        //gv.translate(gv.width / 2, gv.height / 2, z ); // move the origin to the center of the screen
         gv.pushMatrix();
         gv.translate(x, y, z);
         gv.rotateY(rot);
@@ -62,10 +67,11 @@ public class cube {
 
         this.rot += rotang;
         this.z+=this.speed;
+        this.color += colorchange/50;
         this.color %= 255;
         if(this.z > 1024)
         {
-            this.z = -9000;
+            this.z = -7000;
         }
     }
     
