@@ -33,7 +33,7 @@ public class VilimsSphere extends Visual {
 
         gv.stroke(255);
         gv.lights();
-        gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        gv.stroke(GroupVisual.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         gv.camera(0, 15, 300, 0, 0, 0, 0, 1, 0);
         //gv.translate(0, 0, -250);
 
@@ -44,11 +44,11 @@ public class VilimsSphere extends Visual {
         for(int i = 0 ; i < bands.length ; i ++)
         {
             gv.sphereDetail(50);
-            float theta = gv.map(i, 0, bands.length, 0, TWO_PI);
+            float theta = GroupVisual.map(i, 0, bands.length, 0, TWO_PI);
 
             gv.stroke(map(i, 0, bands.length, 0, 255), 255, 255);
-            float x = gv.sin(theta) * radius;
-            float z = gv.cos(theta) * radius;
+            float x = GroupVisual.sin(theta) * radius;
+            float z = GroupVisual.cos(theta) * radius;
             float h = bands[i] - 100;
             gv.pushMatrix();
             gv.translate(x, - h / 2 , z);
@@ -61,7 +61,7 @@ public class VilimsSphere extends Visual {
         // middle sphere, rotates based on the amplitude of the sound
         gv.pushMatrix();
         // change color of the sphere every frame based on amplitude
-        gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        gv.stroke(GroupVisual.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         gv.sphereDetail(16, 16);
         gv.rotateY(gv.getAmplitude() * 2);
         gv.sphere(100);
