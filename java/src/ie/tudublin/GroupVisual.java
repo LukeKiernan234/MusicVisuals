@@ -61,7 +61,7 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
-        hc.createbox(150);
+        hc.createbox(150); 
     }
 
 
