@@ -1,7 +1,6 @@
 package c21737525;
 
 import ie.tudublin.*;
-import processing.core.PApplet;
 import processing.core.PConstants;
 
 public class VilimsVisual
