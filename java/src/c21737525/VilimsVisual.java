@@ -28,7 +28,7 @@ public class VilimsVisual
         
         for (int i = 0; i < gv.getAudioPlayer().mix.size(); i += 8)
         {
-            float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
+            float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * PConstants.PI); // where each line of the circle is drawn
             float stickGrow = GroupVisual.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
             float c = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
             float f = gv.getLerpedBuffer()[i] * gv.getHalfHeight() * 4.0f;

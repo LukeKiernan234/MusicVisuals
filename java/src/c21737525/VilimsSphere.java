@@ -1,7 +1,6 @@
 package c21737525;
 
 import ie.tudublin.*;
-import processing.core.*;
 
 
 public class VilimsSphere extends Visual {
