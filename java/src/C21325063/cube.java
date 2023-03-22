@@ -49,6 +49,9 @@ public class cube {
     public void render(GroupVisual gv)
     {
 
+        gv.camera();
+
+        //gv.translate(gv.width / 2, gv.height / 2, z/2 ); // move the origin to the center of the screen
         gv.pushMatrix();
         gv.translate(x, y, z);
         gv.rotateY(rot);

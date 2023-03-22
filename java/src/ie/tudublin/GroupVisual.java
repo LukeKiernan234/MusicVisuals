@@ -24,9 +24,9 @@ public class GroupVisual extends Visual {
     HaoCube hc = new HaoCube(this);
 
     public void settings() {
-        size(1024, 768, P3D);
+        //size(1024, 768, P3D);
         println("CWD: " + System.getProperty("user.dir"));
-        //fullScreen(P3D, SPAN);
+        fullScreen(P3D);
     }
 
     public void keyPressed() {
@@ -61,7 +61,7 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
-        hc.createbox(150);
+        hc.createbox(500); 
     }
 
 
