@@ -6,6 +6,8 @@ import ddf.minim.*;
 import ddf.minim.analysis.*;
 import processing.core.*;
 import java.util.ArrayList;
+
+import C21325063.HaoCube;
 import ie.tudublin.*;
 
 public class GroupVisual extends Visual {
