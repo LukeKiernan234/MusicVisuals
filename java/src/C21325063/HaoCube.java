@@ -41,6 +41,7 @@ public class HaoCube {
     }
     public void drawbox()
     {
+        gv.camera();
         float rotang = PApplet.map(gv.getAmplitude(),0,0.5f,0,0.5f);
         float speed = PApplet.map(gv.getAmplitude(),0,0.3f,0,50);
 

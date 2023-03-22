@@ -48,7 +48,7 @@ public class VilimsSphere extends Visual {
             gv.stroke(map(i, 0, bands.length, 0, 255), 255, 255);
             float x = GroupVisual.sin(theta) * radius;
             float z = GroupVisual.cos(theta) * radius;
-            float h = bands[i] - 100;
+            float h = (bands[i] - 250)/2;
             gv.pushMatrix();
             gv.translate(x, - h / 2 , z);
             gv.rotateY(theta);
