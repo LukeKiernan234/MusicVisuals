@@ -6,8 +6,6 @@ public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
-    scene1 s1;
-    scene2 s2;
     RotatingAudioBands rt;
 
     public void settings()
@@ -34,9 +32,6 @@ public class MyVisual extends Visual
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
-        s1 = new scene1(this);
-        s2 = new scene2(this);
-        s2.createbox(100);
     }
 
 
@@ -68,7 +63,5 @@ public class MyVisual extends Visual
         calculateAverageAmplitude();        
         // wf.render();
         // abv.render();
-        s1.render();
-        //s2.render();
     }
 }

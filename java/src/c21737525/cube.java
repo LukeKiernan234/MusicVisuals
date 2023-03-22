@@ -1,7 +1,6 @@
-package example;
+package c21737525;
 
-import processing.core.PApplet;
-import java.util.Random;
+import ie.tudublin.GroupVisual;
 
 public class cube {
     private float size;
@@ -47,16 +46,16 @@ public class cube {
     }
 
 
-    public void render(MyVisual mv)
+    public void render(GroupVisual gv)
     {
 
-        mv.pushMatrix();
-        mv.translate(x, y, z);
-        mv.rotateY(rot);
-        mv.rotateX(rot);
-        mv.stroke(color,255,255);
-        mv.box(size);
-        mv.popMatrix();
+        gv.pushMatrix();
+        gv.translate(x, y, z);
+        gv.rotateY(rot);
+        gv.rotateX(rot);
+        gv.stroke(color,255,255);
+        gv.box(size);
+        gv.popMatrix();
 
         this.rot += rotang;
         this.z+=this.speed;
@@ -66,4 +65,5 @@ public class cube {
             this.z = -9000;
         }
     }
+    
 }

@@ -19,6 +19,7 @@ public class GroupVisual extends Visual {
     // create the visuals here
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
+    HaoCube hc = new HaoCube(this);
 
     public void settings() {
         size(1024, 768, P3D);
@@ -58,6 +59,7 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
+        hc.createbox(150);
     }
 
 
@@ -83,6 +85,7 @@ public class GroupVisual extends Visual {
                 vs.render();
                 break;
             case 2:
+                hc.render();
                 break;
             case 3:
                 break;

@@ -5,10 +5,13 @@ import ie.tudublin.*;
 public class VilimsVisual
 {
     GroupVisual gv;
+    float lerpstick;
+    float rotate;
 
     public VilimsVisual(GroupVisual gv)
     {
         this.gv = gv;
+        this.rotate = 0;
     }
 
 
@@ -29,22 +32,27 @@ public class VilimsVisual
         {
             float cirRadius = GroupVisual.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 2 * gv.PI); // where each line of the circle is drawn
             float stickGrow = gv.abs(gv.getAudioPlayer().mix.get(i)) * stick; // lenght of the line based on the amplitude of the sound
+            lerpstick = gv.lerp(lerpstick, stickGrow, 0.2f); // lerping the lenght of the line
             float c = gv.map(i, 0, gv.getAudioPlayer().mix.size(), 0, 255); // full range of the color based on the amplitude of the sound
             float f = gv.getLerpedBuffer()[i] * gv.getHalfHeight() * 4.0f;
             
             gv.stroke(c, 255, 255);
             gv.strokeWeight(5);
-            gv.line(gv.sin(cirRadius) * radius, (gv.cos(cirRadius) * radius) + f, gv.sin(cirRadius) * (stickGrow + radius), (gv.cos(cirRadius) * (stickGrow + radius)) - f);
+            gv.line(gv.sin(cirRadius) * radius, (gv.cos(cirRadius) * radius) + f, gv.sin(cirRadius) * (lerpstick + radius), (gv.cos(cirRadius) * (lerpstick + radius)) - f);
             // on each end of line, add a curvy line
             gv.noFill();
-            gv.arc(gv.sin(cirRadius) * (stickGrow + radius), gv.cos(cirRadius) * (stickGrow + radius), 15, 15, 0, gv.PI); //place half circle at the end of each line 
+            gv.arc(gv.sin(cirRadius) * (lerpstick + radius), gv.cos(cirRadius) * (lerpstick + radius), 15, 15, 0, gv.PI); //place half circle at the end of each line 
         }
 
         //center sphere
         gv.lights();
-        gv.rotateY(gv.getSmoothedAmplitude() * 10 ); // rotate the sphere based on the amplitude of the sound
+        float speed = gv.getAmplitude() * 0.2f;
+        float c = gv.map(gv.getSmoothedAmplitude(), 0, 0.2f, 0, 255);
+        rotate += speed;
+        gv.rotateY(rotate); // rotate the sphere based on the amplitude of the sound
         gv.noFill();
         gv.stroke(gv.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        gv.stroke(c,255,255);
         gv.strokeWeight(2);
         gv.sphereDetail(32, 32);
         gv.sphere(250);
