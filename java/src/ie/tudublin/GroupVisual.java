@@ -8,6 +8,7 @@ import processing.core.*;
 import java.util.ArrayList;
 
 import C21325063.HaoCube;
+import C21411466.*;
 import ie.tudublin.*;
 
 public class GroupVisual extends Visual {
@@ -16,15 +17,16 @@ public class GroupVisual extends Visual {
     private float[] lerpedBuffer2;
     private float halfHeight = height / 2;
 
-    int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual
+    int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual 4 = lukeVisual
 
     // create the visuals here
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
     HaoCube hc = new HaoCube(this);
+    LukeVisual lv = new LukeVisual(this);
 
     public void settings() {
-        //size(1024, 768, P3D);
+        //size(1024, 768, P3D);Fg
         println("CWD: " + System.getProperty("user.dir"));
         fullScreen(P3D);
     }
@@ -90,6 +92,7 @@ public class GroupVisual extends Visual {
                 hc.render();
                 break;
             case 3:
+                lv.render();
                 break;
         }
     }
@@ -122,5 +125,9 @@ public class GroupVisual extends Visual {
         this.halfHeight = halfHeight;
     }
 
+    public int getAudioLength() {
+        AudioPlayer ap = getAudioPlayer();
+        return (int) Math.ceil(ap.length() / 1000.0);
+    }
 
 }
