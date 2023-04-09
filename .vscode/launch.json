@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LukeVisual2",
+            "request": "launch",
+            "mainClass": "C21411466.LukeVisual2",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",

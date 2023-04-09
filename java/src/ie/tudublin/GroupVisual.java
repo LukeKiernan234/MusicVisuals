@@ -24,6 +24,8 @@ public class GroupVisual extends Visual {
     VilimsSphere vs = new VilimsSphere(this);
     HaoCube hc = new HaoCube(this);
     LukeVisual lv = new LukeVisual(this);
+    LukeVisual2 lv2 = new LukeVisual2(this);
+    
 
     public void settings() {
         //size(1024, 768, P3D);Fg
@@ -48,6 +50,9 @@ public class GroupVisual extends Visual {
         }
         if (key == '4') {
             visual = 3;
+        }
+        if (key == '5') {
+            visual = 4;
         }
 
 
@@ -94,12 +99,18 @@ public class GroupVisual extends Visual {
             case 3:
                 lv.render();
                 break;
+            case 4:
+                lv2.render();
+                break;
         }
     }
 
     
 
 
+    
+    
+    
 
     public float[] getLerpedBuffer() {
         return lerpedBuffer;
@@ -129,5 +140,10 @@ public class GroupVisual extends Visual {
         AudioPlayer ap = getAudioPlayer();
         return (int) Math.ceil(ap.length() / 1000.0);
     }
+
+    public float getSmoothedFrequency(int i) {
+        return 0;
+    }
+    
 
 }

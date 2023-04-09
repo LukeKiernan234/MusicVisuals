@@ -9,15 +9,15 @@ public abstract class Visual extends PApplet
 	private int frameSize = 1024;
 	private int sampleRate = 44100;
 
-	private float[] bands;
+	protected float[] bands;
 	private float[] smoothedBands;
 	private float[] fullband;
 
-	private Minim minim;
+	protected Minim minim;
 	private AudioInput ai;
 	private AudioPlayer ap;
 	private AudioBuffer ab;
-	private FFT fft;
+	protected FFT fft;
 
 	private float amplitude  = 0;
 	private float smothedAmplitude = 0;
@@ -147,6 +147,8 @@ public abstract class Visual extends PApplet
 	public AudioPlayer getAudioPlayer() {
 		return ap;
 	}
+	
+	
 
 	public FFT getFFT() {
 		return fft;
@@ -163,4 +165,7 @@ public abstract class Visual extends PApplet
 	public float[] getFullband() {
 		return fullband;
 	}
+
+	
+
 }
