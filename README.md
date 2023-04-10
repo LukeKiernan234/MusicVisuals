@@ -16,7 +16,7 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - compile and run main.java from ie.tudublin package
 - press space bar to pause/play music
 - visualisatons can be changed by pressing 1, 2, 3, 4, 5, 6
-- *Notice* : visualisations will change automatically at certain parts of the track
+- **Notice** : visualisations will change automatically at certain parts of the track
 ---
 # How it works
 - Each team member has its own directory containing the visualisations. 
@@ -25,8 +25,14 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 
 ## Vilim Mikic
 - I created 2 visualisations. The first one is combination of 2D and 3D shapes. 
--The first visualisation is split in two parts. The first part is the outer circle in which the sticks represent the amplitude of the sound. At the end of each stick is an arc(half circle). Thanks to year 3 student to help me with maths(I find it hard to visualise sin and cos for some reason). The 2nd part of this visualisation is a sphere which rotation speed is base on the amplitude of the sound. The colour is based on the SmoothedAmplitude(comes from GroupVisual class).
+- The first visualisation is split in two parts. The first part is the outer circle in which the sticks represent the amplitude of the sound. At the end of each stick is an arc(half circle). Thanks to year 3 student to help me with maths(I find it hard to visualise sin and cos for some reason). The 2nd part of this visualisation is a sphere which rotation speed is base on the amplitude of the sound. The colour is based on the SmoothedAmplitude(comes from GroupVisual class).
 ![Vilim Visual 1](images/Vilim-1.png)
+
+- The second visualisation is made up of 3D spheres. It is made up of a large very low-res sphere and smaller high-res spheres. The large sphere is intentionally low-res, so smaller spheres can be seen at all times. It doesn't look very round, since spheres in Processing library are just tesselated triangles(polygons). The colour and rotation speed is based on the amplitude of the sound.
+- Small spheres are much higher res, so they look smoother. The number of spheres and colour is based on the frequency bands, rotation is based on the amplitude, as well as the bounce of the spheres.
+![Vilim Visual 2](images/Vilim-2.png)
+
+
 
 
 
