@@ -23,6 +23,16 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - Aggregate file GroupVisual.java is used to run the visualisations, initialise the music, create the objects and call the methods from the visualisations. This file has been moved to ie.tudublin package for convenience.
 
 
+## Vilim Mikic
+- I created 2 visualisations. The first one is combination of 2D and 3D shapes. 
+-The first visualisation is split in two parts. The first part is the outer circle in which the sticks represent the amplitude of the sound. At the end of each stick is an arc(half circle). Thanks to year 3 student to help me with maths(I find it hard to visualise sin and cos for some reason). The 2nd part of this visualisation is a sphere which rotation speed is base on the amplitude of the sound. The colour is based on the SmoothedAmplitude(comes from GroupVisual class).
+![Vilim Visual 1](images/Vilim-1.png)
+
+
+
+
+
+
 # What I am most proud of in the assignment
 
 # Markdown Tutorial
