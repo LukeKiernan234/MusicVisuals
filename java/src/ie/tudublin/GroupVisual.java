@@ -19,13 +19,11 @@ public class GroupVisual extends Visual {
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual 4 = lukeVisual
 
-    // create the visuals here
+    // create the visuals here, these are objects of the classes
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
     HaoCube hc = new HaoCube(this);
-    LukeVisual lv = new LukeVisual(this);
-    LukeVisual2 lv2 = new LukeVisual2(this);
-    
+    LukeVisual lv = new LukeVisual(this); 
 
     public void settings() {
         //size(1024, 768, P3D);Fg
@@ -100,7 +98,7 @@ public class GroupVisual extends Visual {
                 lv.render();
                 break;
             case 4:
-                lv2.render();
+            
                 break;
         }
     }

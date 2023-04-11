@@ -1,21 +1,43 @@
 # Music Visualiser Project
-
-Name: Luke Kiernan, Hao Lin , Vilim Mikic
-
-Student Number: C21737525
-
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
-
+---
+# Group Members
+| Name | Student Number |
+|-----------|-----------|
+|Luke Kiernan | insert |
+|Hao Lin | insert |
+|Vilim Mikic | C21737525 |
+---
+---
 # Description of the assignment
-
+- In this assignment, we have 2 visualisations each using Java processing.
+Visualisations are based on the music track from the movie "Trainspotting" by Underworld. Track name is "Born Slippy". Visualisations are made to respond to the amplitude of the music and frequency bands. Audio analysis is done using the Minim library. 
+---
 # Instructions
-
+- compile and run main.java from ie.tudublin package
+- press space bar to pause/play music
+- visualisatons can be changed by pressing 1, 2, 3, 4, 5, 6
+- **Notice** : visualisations will change automatically at certain parts of the track
+---
 # How it works
+- Each team member has its own directory containing the visualisations. 
+- Aggregate file GroupVisual.java is used to run the visualisations, initialise the music, create the objects and call the methods from the visualisations. This file has been moved to ie.tudublin package for convenience.
+
+
+## Vilim Mikic
+- I created 2 visualisations. The first one is combination of 2D and 3D shapes. 
+- The first visualisation is split in two parts. The first part is the outer circle in which the sticks represent the amplitude of the sound. At the end of each stick is an arc(half circle). Thanks to year 3 student to help me with maths(I find it hard to visualise sin and cos for some reason). The 2nd part of this visualisation is a sphere which rotation speed is base on the amplitude of the sound. The colour is based on the SmoothedAmplitude(comes from GroupVisual class).
+![Vilim Visual 1](images/Vilim-1.png)
+
+- The second visualisation is made up of 3D spheres. It is made up of a large very low-res sphere and smaller high-res spheres. The large sphere is intentionally low-res, so smaller spheres can be seen at all times. It doesn't look very round, since spheres in Processing library are just tesselated triangles(polygons). The colour and rotation speed is based on the amplitude of the sound.
+- Small spheres are much higher res, so they look smoother. The number of spheres and colour is based on the frequency bands, rotation is based on the amplitude, as well as the bounce of the spheres.
+![Vilim Visual 2](images/Vilim-2.png)
+
+
+
+
+
+
+
 
 # What I am most proud of in the assignment
 

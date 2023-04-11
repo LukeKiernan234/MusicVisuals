@@ -17,7 +17,7 @@ public class VilimsVisual
 
 
     // This visual is split in two parts, the first part is the outer circle in which sticks representing the amplitude of the sound are drawn, at the end of each stick is half-circle
-    // The second part is the inner circle, that needs to be re-visited, but the initial idea was to invert the sticks so they are drawn towards the center of the circle.
+    // The second part is the rotating low-res sphere which is going to be rotating around the center of the screen, and the color of the sphere is going to be based on the amplitude of the sound.
     public void render()
     {
 
