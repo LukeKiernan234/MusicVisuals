@@ -27,8 +27,6 @@ public class LukeVisual2 extends Visual {
         }
     }
     public void renderBackground() {
-        // Set background color
-        gv.background(0);
     
         // Draw particles
         for (int i = 0; i < 100; i++) {
@@ -45,7 +43,6 @@ public class LukeVisual2 extends Visual {
             gv.translate(gv.width/2 + x, gv.height/2 + y, z);
             gv.sphere(size);
             gv.popMatrix();
-
         }
     }
     
