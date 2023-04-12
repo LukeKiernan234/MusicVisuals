@@ -3,6 +3,7 @@ package C21411466;
 import ie.tudublin.*;
 
 public class LukeVisual2 extends Visual {
+    
     GroupVisual gv;
     float radius = 300;
     float angle = 0;
@@ -12,6 +13,7 @@ public class LukeVisual2 extends Visual {
     float[] lineAngles;
     float[] lineSpeeds;
     float[] lineOffsets;
+
     public LukeVisual2(GroupVisual gv) {
         this.gv = gv;
         lineAngles = new float[numLines];
@@ -29,6 +31,7 @@ public class LukeVisual2 extends Visual {
     public void renderBackground() {
     
         // Draw particles
+        gv.camera();
         for (int i = 0; i < 100; i++) {
             float x = gv.random(-gv.width/2, gv.width/2);
             float y = gv.random(-gv.height/2, gv.height/2);
@@ -48,6 +51,7 @@ public class LukeVisual2 extends Visual {
     
 
     public void render() {
+
         float amplitude = gv.getSmoothedAmplitude();
         float size1 = gv.map(amplitude, 0, 1, 0.5f, 20.0f);
         radius = 300 * size1;
