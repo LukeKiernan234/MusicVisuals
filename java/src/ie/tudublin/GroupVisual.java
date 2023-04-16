@@ -8,6 +8,7 @@ import processing.core.*;
 import java.util.ArrayList;
 
 import C21325063.HaoCube;
+import C21325063.HaoWave;
 import ie.tudublin.*;
 
 public class GroupVisual extends Visual {
@@ -15,16 +16,19 @@ public class GroupVisual extends Visual {
     private float[] lerpedBuffer;
     private float[] lerpedBuffer2;
     private float halfHeight = height / 2;
+    private int numwaves = 1;
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual
 
     // create the visuals here
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
+
     HaoCube hc = new HaoCube(this);
+    HaoWave hw;
 
     public void settings() {
-        //size(1024, 768, P3D);
+        size(1024, 768, P3D);
         println("CWD: " + System.getProperty("user.dir"));
         fullScreen(P3D);
     }
@@ -47,6 +51,10 @@ public class GroupVisual extends Visual {
         if (key == '4') {
             visual = 3;
         }
+        if(key == '5')
+        {
+            visual = 4;
+        }
 
 
     }
@@ -61,7 +69,9 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
-        hc.createbox(500); 
+        hc.createbox(250,hc.cubes1,-8000,-1000,30); 
+        hc.createbox(300,hc.cubes2,-6000,-1000,1000); 
+        hw = new HaoWave(this);
     }
 
 
@@ -87,10 +97,15 @@ public class GroupVisual extends Visual {
                 vs.render();
                 break;
             case 2:
-                hc.render();
+                hc.render(hc.cubes1);
                 break;
             case 3:
+                hc.render(hc.cubes2);
                 break;
+            case 4:
+                hw.render();
+                break;
+
         }
     }
 
