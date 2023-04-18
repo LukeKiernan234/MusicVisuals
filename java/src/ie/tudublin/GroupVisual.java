@@ -7,16 +7,13 @@ import ddf.minim.analysis.*;
 import processing.core.*;
 import java.util.ArrayList;
 
-import C21325063.HaoCube;
-import C21325063.HaoWave;
-import ie.tudublin.*;
+import C21325063.*;
 
 public class GroupVisual extends Visual {
 
     private float[] lerpedBuffer;
     private float[] lerpedBuffer2;
     private float halfHeight = height / 2;
-    private int numwaves = 1;
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual
 
@@ -25,7 +22,7 @@ public class GroupVisual extends Visual {
     VilimsSphere vs = new VilimsSphere(this);
 
     HaoCube hc = new HaoCube(this);
-    HaoWave hw;
+    HaoWave hw = new HaoWave(this);
 
     public void settings() {
         size(1024, 768, P3D);
@@ -71,7 +68,6 @@ public class GroupVisual extends Visual {
         lerpedBuffer2 = new float[width]; 
         hc.createbox(250,hc.cubes1,-8000,-1000,30); 
         hc.createbox(300,hc.cubes2,-6000,-1000,1000); 
-        hw = new HaoWave(this);
     }
 
 
@@ -105,7 +101,8 @@ public class GroupVisual extends Visual {
             case 4:
                 hw.render();
                 break;
-
+            default:
+                break;
         }
     }
 
