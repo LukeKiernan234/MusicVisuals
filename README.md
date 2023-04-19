@@ -3,7 +3,7 @@
 # Group Members
 | Name | Student Number |
 |-----------|-----------|
-|Luke Kiernan | insert |
+|Luke Kiernan | C21411466 |
 |Hao Lin | insert |
 |Vilim Mikic | C21737525 |
 ---
@@ -31,6 +31,9 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - The second visualisation is made up of 3D spheres. It is made up of a large very low-res sphere and smaller high-res spheres. The large sphere is intentionally low-res, so smaller spheres can be seen at all times. It doesn't look very round, since spheres in Processing library are just tesselated triangles(polygons). The colour and rotation speed is based on the amplitude of the sound.
 - Small spheres are much higher res, so they look smoother. The number of spheres and colour is based on the frequency bands, rotation is based on the amplitude, as well as the bounce of the spheres.
 ![Vilim Visual 2](images/Vilim-2.png)
+
+## Luke Kiernan
+- I also created 2 visualisation. The first visuliation is is a 
 
 
 
