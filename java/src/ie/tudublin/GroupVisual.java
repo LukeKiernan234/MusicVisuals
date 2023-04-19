@@ -1,15 +1,9 @@
 package ie.tudublin;
 
-import c21737525.*;
-
 import ddf.minim.*;
-import ddf.minim.analysis.*;
-import processing.core.*;
-import java.util.ArrayList;
-
+import c21737525.*;
 import C21325063.*;
 import C21411466.*;
-import ie.tudublin.*;
 
 public class GroupVisual extends Visual {
 

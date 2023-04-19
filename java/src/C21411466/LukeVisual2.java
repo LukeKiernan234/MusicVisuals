@@ -2,6 +2,7 @@ package C21411466;
 
 import ie.tudublin.*;
 import processing.core.PApplet;
+import processing.core.PConstants;
 
 public class LukeVisual2 extends Visual {
     
@@ -20,9 +21,9 @@ public class LukeVisual2 extends Visual {
         lineAngles = new float[numLines];
         lineSpeeds = new float[numLines];
         lineOffsets = new float[numLines];
-        float angleIncrement = gv.TWO_PI / (float) numLines;
+        float angleIncrement = PConstants.TWO_PI / (float) numLines;
         float speedIncrement = 0.05f / (float) numLines;
-        float offsetIncrement = gv.TWO_PI / (float) numLines;
+        float offsetIncrement = PConstants.TWO_PI / (float) numLines;
         for (int i = 0; i < numLines; i++) {
             lineAngles[i] = i * angleIncrement;
             lineSpeeds[i] = (i + 1) * speedIncrement;
