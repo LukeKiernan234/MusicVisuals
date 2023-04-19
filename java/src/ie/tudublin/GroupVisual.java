@@ -7,7 +7,7 @@ import ddf.minim.analysis.*;
 import processing.core.*;
 import java.util.ArrayList;
 
-import C21325063.HaoCube;
+import C21325063.*;
 import C21411466.*;
 import ie.tudublin.*;
 
@@ -22,9 +22,11 @@ public class GroupVisual extends Visual {
     // create the visuals here, these are objects of the classes
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
+
     HaoCube hc = new HaoCube(this);
     LukeVisual lv = new LukeVisual(this); 
     LukeVisual2 lv2 = new LukeVisual2(this);
+    HaoWave hw = new HaoWave(this);
 
     public void settings() {
         //size(1024, 768, P3D);Fg
@@ -53,6 +55,12 @@ public class GroupVisual extends Visual {
         if (key == '5') {
             visual = 4;
         }
+        if (key == '6') {
+            visual = 5;
+        }
+        if (key == '7') {
+            visual = 6;
+        }
 
 
     }
@@ -67,7 +75,8 @@ public class GroupVisual extends Visual {
         smooth();
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
-        hc.createbox(500); 
+        hc.createbox(250,hc.cubes1,-8000,-1000,30); 
+        hc.createbox(300,hc.cubes2,-6000,-1000,1000); 
     }
 
 
@@ -93,13 +102,19 @@ public class GroupVisual extends Visual {
                 vs.render();
                 break;
             case 2:
-                hc.render();
+                hc.render(hc.cubes1);
                 break;
             case 3:
                 lv.render();
                 break;
             case 4:
                 lv2.render();
+                break;
+            case 5:
+                hw.render();
+                break;
+            case 6:
+                hc.render(hc.cubes2);
                 break;
         }
     }

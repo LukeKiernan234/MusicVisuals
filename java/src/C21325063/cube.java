@@ -45,13 +45,12 @@ public class cube {
         this.color = color;
     }
 
-
     public void render(GroupVisual gv)
     {
 
         gv.camera();
 
-        //gv.translate(gv.width / 2, gv.height / 2, z/2 ); // move the origin to the center of the screen
+        //gv.translate(gv.width / 2, gv.height / 2, z ); // move the origin to the center of the screen
         gv.pushMatrix();
         gv.translate(x, y, z);
         gv.rotateY(rot);
@@ -63,9 +62,29 @@ public class cube {
         this.rot += rotang;
         this.z+=this.speed;
         this.color %= 255;
+        if(this.z > 1000)
+        {
+            this.z = -6000;
+        }
+    }
+
+    public void render2(GroupVisual gv)
+    {
+        gv.camera();
+
+        gv.translate(gv.width / 2, gv.height / 2, z ); // move the origin to the center of the screen
+        gv.pushMatrix();
+        gv.rotateY(rot);
+        gv.rotateX(rot);
+        gv.stroke(color,255,255);
+        gv.box(size);
+        gv.popMatrix();
+
+        this.rot += rotang;
+        this.z+=this.speed;
         if(this.z > 1024)
         {
-            this.z = -9000;
+            this.z = -7000;
         }
     }
     

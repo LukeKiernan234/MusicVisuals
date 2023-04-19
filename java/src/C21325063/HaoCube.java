@@ -10,7 +10,8 @@ import ie.tudublin.*;
 public class HaoCube {
     GroupVisual gv;
     float lerpc;
-    ArrayList<cube> cubes = new ArrayList<cube>();
+    public ArrayList<cube> cubes1 = new ArrayList<cube>();
+    public ArrayList<cube> cubes2 = new ArrayList<cube>();
 
     public HaoCube(GroupVisual gv)
     {
@@ -18,35 +19,37 @@ public class HaoCube {
     }
     float rotate = 1f;
     float z = 100;
-    public void render()
+    public void render(ArrayList<cube> cubes)
     {
         gv.noFill();
         gv.lights();
-        drawbox();
+        drawbox(cubes);
+       
     }
 
-    public void createbox(int num)
+    public void createbox(int num, ArrayList<cube> cubes,float low,float high,float size)
     {
         Random r = new Random();
+        //initalize of cubes, randomize thier position and color
+        //add cubes into arraylist
         for(int i = 0; i < num; i++)
         {
             float x = r.nextFloat(gv.width);
             float y = r.nextFloat(gv.height);
-            float z = r.nextFloat(-9000, -1000);
-            float color = r.nextFloat(255);
-            cube c = new cube(20.0f,x,y, z, 0.5f,color);
+            float z = r.nextFloat(low, high);
+            float color = 0;
+            cube c = new cube(size,x,y, z, 0.0f,color);
             cubes.add(c);
         }
 
     }
-    public void drawbox()
+    public void drawbox(ArrayList<cube> cubes)
     {
         gv.camera();
-        float rotang = PApplet.map(gv.getAmplitude(),0,0.5f,0,0.5f);
+        float rotang = PApplet.map(gv.getAmplitude(),0.04f,0.2f,0,0.2f);
         float speed = PApplet.map(gv.getAmplitude(),0,0.3f,0,50);
 
-
-        float color = PApplet.map(gv.getSmoothedAmplitude(),0,0.2f,0,255);
+        float color = PApplet.map(gv.getSmoothedAmplitude(),0.06f,0.23f,100,255);
         lerpc = PApplet.lerp(lerpc,color,0.05f);
 
         for(int i = 0;i<cubes.size();i++)
@@ -55,7 +58,14 @@ public class HaoCube {
             c.setSpeed(speed);
             c.setColor(lerpc);
             c.setRotang(rotang);
-            c.render(gv);
+            if(cubes == cubes2)
+            {
+                c.render2(gv);
+            }
+            else if(cubes == cubes1)
+            {
+                c.render(gv);
+            }
         }
     }
 }
