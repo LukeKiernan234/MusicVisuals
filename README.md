@@ -4,7 +4,7 @@
 | Name | Student Number |
 |-----------|-----------|
 |Luke Kiernan | insert |
-|Hao Lin | insert |
+|Hao Lin | C21325063 |
 |Vilim Mikic | C21737525 |
 ---
 ---
@@ -31,6 +31,17 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - The second visualisation is made up of 3D spheres. It is made up of a large very low-res sphere and smaller high-res spheres. The large sphere is intentionally low-res, so smaller spheres can be seen at all times. It doesn't look very round, since spheres in Processing library are just tesselated triangles(polygons). The colour and rotation speed is based on the amplitude of the sound.
 - Small spheres are much higher res, so they look smoother. The number of spheres and colour is based on the frequency bands, rotation is based on the amplitude, as well as the bounce of the spheres.
 ![Vilim Visual 2](images/Vilim-2.png)
+
+## Hao Lin
+- 3 visualization created.
+- First one is a 3D visualization of cubes moving toward the screen and regenerate at the far end after they disappear, the speed and colour of cubes is based on the amplitude of the song. A class for cube is created to store information about each specific cube and then an ArrayList of cube is created to store all cubes.
+![Hao Visual 1](images/Hao-1.png)
+
+- Second visualization comes from coincidence during my debugging of first scene. it's based on cubes from first visualization, what the difference is that the x and y coordinate of cubes is fixed and cubes are getting bigger with the changing of z-coordinate. The change of z value is base on the amplitude of the song.
+![Hao Visual 2](images/Hao-2.png)
+
+- Third visualization is galaxy-like scene consist by a big circle with lines come out from edge of the circle on the center and mutiple small circles rotating around the central circle. The size and color of lines for the middle circle is based on the amplitude of circle. On the outter, speed of smaller circles rotating and distance of smaller circles away from the center is controlled by the amplitude of song. noise function is used to randomize the position of small circles.
+ ![Hao Visual 2](images/Hao-3.png)
 
 
 

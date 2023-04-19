@@ -56,7 +56,7 @@ public class cube {
         gv.rotateY(rot);
         gv.rotateX(rot);
         gv.stroke(color,255,255);
-        gv.strokeWeight(3);
+        gv.strokeWeight(2);
         gv.box(size);
         gv.popMatrix();
 

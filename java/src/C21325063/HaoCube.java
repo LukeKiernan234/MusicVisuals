@@ -37,8 +37,17 @@ public class HaoCube {
             float x = r.nextFloat(gv.width);
             float y = r.nextFloat(gv.height);
             float z = r.nextFloat(low, high);
+            float rot = r.nextFloat(0,2);
             float color = 0;
-            cube c = new cube(size,x,y, z, 0.0f,color);
+            cube c;
+            if(cubes == cubes1)
+            {
+                c = new cube(size,x,y, z, rot,color);
+            }
+            else
+            {
+                c = new cube(size,x,y, z, 0,color);
+            }
             cubes.add(c);
         }
 
