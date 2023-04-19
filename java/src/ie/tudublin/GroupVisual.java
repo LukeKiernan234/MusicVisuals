@@ -90,25 +90,25 @@ public class GroupVisual extends Visual {
 
         switch (visual) {
             case 0:
-                vv.render();
+                hw.render();
                 break;
             case 1:
-                vs.render();
+                vv.render();
                 break;
             case 2:
-                hc.render(hc.cubes1);
+                lv.render();
                 break;
             case 3:
-                lv.render();
+                hc.render(hc.cubes1);
                 break;
             case 4:
                 lv2.render();
                 break;
             case 5:
-                hw.render();
+                hc.render(hc.cubes2);
                 break;
             case 6:
-                hc.render(hc.cubes2);
+                vs.render();
                 break;
         }
     }
