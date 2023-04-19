@@ -74,6 +74,7 @@ public class cube {
 
         gv.translate(gv.width / 2, gv.height / 2, z ); // move the origin to the center of the screen
         gv.pushMatrix();
+        gv.strokeWeight(3);
         gv.rotateY(rot);
         gv.rotateX(rot);
         gv.stroke(color,255,255);
@@ -84,7 +85,7 @@ public class cube {
         this.z+=this.speed;
         if(this.z > 1024)
         {
-            this.z = -7000;
+            this.z = -10000;
         }
     }
     
