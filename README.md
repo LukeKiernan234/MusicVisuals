@@ -18,13 +18,13 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - visualisatons can be changed by pressing 1, 2, 3, 4, 5, 6
 - **Notice** : visualisations will change automatically at certain parts of the track
 - Visualisations order: 
-	1 - hw 5 HaoWave 0:00 - 0:55,
-	2 - vv 0 VilimsVisual 0:55 - 1:10, 
+	1 - hw 5 HaoWave 0:00 - 0:45,
+	2 - vv 0 VilimsVisual 0:45 - 1:10, 
 	3 - lv 3 LukeVisual 1:10 - 1:35, 
 	4 - hc 2 HaoCube 1:35 - 2:23, 
-	5 - lv2 4 LukeVisual2 2:23 - 3:00, 
-	6,  hc2 6 HaoCube2 3:00 - 3:16,  
-	7-  vs 1 VilimSsphere 3:16 - 3:47, 
+	5 - lv2 4 LukeVisual2 2:23 - 2:57, 
+	6,  hc2 6 HaoCube2 2:57 - 3:25,  
+	7-  vs 1 VilimSsphere 3:25 - 3:47, 
 ---
 # How it works
 - Each team member has its own directory containing the visualisations. 
