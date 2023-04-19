@@ -17,6 +17,7 @@ public class LukeVisual extends Visual {
     }
 
     public void render() {
+        gv.strokeWeight(3);
         gv.stroke(255);
         gv.lights();
         gv.stroke(GroupVisual.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
@@ -35,7 +36,7 @@ public class LukeVisual extends Visual {
   
             rot += 0.004f;
             gv.rotateY(rot);
-            gv.translate(gv.width / numCubes * (i + 0.5f) - gv.width / 2, gv.height / 2, 0);
+            gv.translate(gv.width / numCubes * (i + 0.5f) - gv.width / 2, gv.height / 5, 0);
             gv.fill(map(i, 0, numCubes, 0, 255), 255, 255); 
             gv.box(w, h, w);
             gv.popMatrix();

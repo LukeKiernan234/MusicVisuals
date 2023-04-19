@@ -3,7 +3,7 @@
 # Group Members
 | Name | Student Number |
 |-----------|-----------|
-|Luke Kiernan | insert |
+|Luke Kiernan | C21411466 |
 |Hao Lin | C21325063 |
 |Vilim Mikic | C21737525 |
 ---
@@ -32,6 +32,9 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - Small spheres are much higher res, so they look smoother. The number of spheres and colour is based on the frequency bands, rotation is based on the amplitude, as well as the bounce of the spheres.
 ![Vilim Visual 2](images/Vilim-2.png)
 
+## Luke Kiernan
+- I also created 2 visualisation. The first visuliation is is a 
+
 ## Hao Lin
 - 3 visualization created.
 - First one is a 3D visualization of cubes moving toward the screen and regenerate at the far end after they disappear, the speed and colour of cubes is based on the amplitude of the song. A class for cube is created to store information about each specific cube and then an ArrayList of cube is created to store all cubes.
@@ -42,7 +45,6 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 
 - Third visualization is galaxy-like scene consist by a big circle with lines come out from edge of the circle on the center and mutiple small circles rotating around the central circle. The size and color of lines for the middle circle is based on the amplitude of circle. On the outter, speed of smaller circles rotating and distance of smaller circles away from the center is controlled by the amplitude of song. noise function is used to randomize the position of small circles.
  ![Hao Visual 2](images/Hao-3.png)
-
 
 
 
