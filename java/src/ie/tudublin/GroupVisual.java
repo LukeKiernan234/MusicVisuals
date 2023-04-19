@@ -76,7 +76,7 @@ public class GroupVisual extends Visual {
         lerpedBuffer = new float[width];
         lerpedBuffer2 = new float[width]; 
         hc.createbox(250,hc.cubes1,-8000,-1000,30); 
-        hc.createbox(300,hc.cubes2,-6000,-1000,1000); 
+        hc.createbox(100,hc.cubes2,-6000,-1000,1000); 
     }
 
 

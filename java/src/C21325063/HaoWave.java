@@ -24,7 +24,7 @@ public class HaoWave {
     offset = gv.random(0,5);
     waveheight = 500;
     totallength = 10 * PApplet.TWO_PI;
-    circlesize = 6;
+    circlesize = 10;
     outer_size = 30;
     this.gv = gv;
     cy = this.gv.height / 2;
@@ -33,6 +33,7 @@ public class HaoWave {
 
   public void render()
   {
+    gv.camera();
     //calculation for outer circle
     offsetspeed = PApplet.map(gv.getSmoothedAmplitude(),0.05f,0.23f,0.01f,0.03f);
     color = PApplet.map(gv.getSmoothedAmplitude(),0.05f,0.23f,0,25);
