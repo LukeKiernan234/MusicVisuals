@@ -42,6 +42,8 @@ public class VilimsSphere extends Visual {
         float[] bands = gv.getSmoothedBands();
         for(int i = 0 ; i < bands.length ; i ++)
         {
+            gv.noFill();
+            gv.strokeWeight(3);
             gv.sphereDetail(50);
             float theta = GroupVisual.map(i, 0, bands.length, 0, TWO_PI);
 
