@@ -13,7 +13,7 @@ public class GroupVisual extends Visual {
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual 4 = lukeVisual
     int m = 0;
-    int mode[] = {45, 70, 95, 143, 177, 205, 300};
+    int mode[] = {45, 70, 95, 143, 177, 205, 327};
     // create the visuals here, these are objects of the classes
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
@@ -91,6 +91,10 @@ public class GroupVisual extends Visual {
             e.printStackTrace();
         }
         m = millis() /1000;
+        //value store in mode array stands for the end time of each visual
+        //end times stored in mode array are sorted in ascending order
+        //compare current time to the end time of each visual until find a end time that is greater than current time
+        //then loop stops and the current index stands for the visual that should be displayed
         for (int i = 0; i < mode.length; i++) {
             if (m < mode[i]) {
                 visual = i;
