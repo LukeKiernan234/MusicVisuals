@@ -1,6 +1,7 @@
 package C21411466;
 
 import ie.tudublin.*;
+import processing.core.PApplet;
 
 public class LukeVisual2 extends Visual {
     
@@ -52,8 +53,10 @@ public class LukeVisual2 extends Visual {
 
     public void render() {
 
+        gv.pushMatrix();
+
         float amplitude = gv.getSmoothedAmplitude();
-        float size1 = gv.map(amplitude, 0, 1, 0.5f, 20.0f);
+        float size1 = PApplet.map(amplitude, 0, 1, 0.5f, 20.0f);
         radius = 300 * size1;
         lineLength = 100 * size1;
     
@@ -63,17 +66,17 @@ public class LukeVisual2 extends Visual {
         gv.noFill();
     
         // Update angles of lines
-        float angleIncrement = gv.map(amplitude, 0, 1, 0, 0.05f);
+        float angleIncrement = PApplet.map(amplitude, 0, 1, 0, 0.05f);
         for (int i = 0; i < numLines; i++) {
             lineAngles[i] += lineSpeeds[i] + angleIncrement;
         }
     
         // Draw lines
         for (int i = 0; i < numLines; i++) {
-            float x = gv.sin(lineAngles[i] + lineOffsets[i]) * radius;
-            float y = gv.cos(lineAngles[i] + lineOffsets[i]) * radius;
-            float z = gv.map(amplitude, 0, 1, -radius, radius);
-            float thickness = gv.map(gv.getSmoothedFrequency(i), 0, 1, 8, lineThickness);
+            float x = PApplet.sin(lineAngles[i] + lineOffsets[i]) * radius;
+            float y = PApplet.cos(lineAngles[i] + lineOffsets[i]) * radius;
+            float z = PApplet.map(amplitude, 0, 1, -radius, radius);
+            float thickness = PApplet.map(gv.getSmoothedFrequency(i), 0, 1, 8, lineThickness);
     
             // Increase thickness and length gradually with amplitude
             thickness *= amplitude * 10;
@@ -81,11 +84,14 @@ public class LukeVisual2 extends Visual {
     
             // Set stroke color and weight
             gv.strokeWeight(thickness);
-            gv.stroke(gv.map(i, 0, numLines, 0, 255), 255, 255);
+            gv.stroke(PApplet.map(i, 0, numLines, 0, 255), 255, 255);
     
             // Draw line
             gv.line(gv.width/2, gv.height/2, z, x+gv.width/2, y+gv.height/2, z);
+
+            
         }
+        gv.popMatrix();
     }
     
 }
