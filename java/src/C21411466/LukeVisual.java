@@ -33,7 +33,7 @@ public class LukeVisual extends Visual {
     
             gv.pushMatrix();
   
-            rot += 0.01f;
+            rot += 0.004f;
             gv.rotateY(rot);
             gv.translate(gv.width / numCubes * (i + 0.5f) - gv.width / 2, gv.height / 2, 0);
             gv.fill(map(i, 0, numCubes, 0, 255), 255, 255); 
@@ -41,6 +41,6 @@ public class LukeVisual extends Visual {
             gv.popMatrix();
         }
     
-        delay(50);
+        
     }
 }
