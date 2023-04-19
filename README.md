@@ -41,7 +41,11 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 ![Vilim Visual 2](images/Vilim-2.png)
 
 ## Luke Kiernan
-- I also created 2 visualisation. The first visuliation is is a 
+- I also created 2 visualisation. The first visuliation is is a i series of collums based off the frequency bands, they react to the amplitude of the music and rotate around the center on a constant rotation
+![Luke visual 1](images/LukeVisual-1.png)
+
+- The second visuliation contains 2 parts a star like object in the middle of the screen and the background. The star size changes based on the amplitude of the song the angles of the lines change based on the amplitude. The lines also change based on the frequency. The backgound draws particles randomly and they move around the screen.
+![Vilim Visual 2](images/LukeVisual-2.png)
 
 ## Hao Lin
 - 3 visualization created.
