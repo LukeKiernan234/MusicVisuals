@@ -12,7 +12,8 @@ public class GroupVisual extends Visual {
     private float halfHeight = height / 2;
 
     int visual = 0; // 0 = VilimsVisual, 1 = VilimsSphere, 2 = RotatingAudioBands, 3 = MyVisual 4 = lukeVisual
-
+    int m = 0;
+    int mode[] = {45, 70, 95, 143, 177, 205, 300};
     // create the visuals here, these are objects of the classes
     VilimsVisual vv = new VilimsVisual(this);
     VilimsSphere vs = new VilimsSphere(this);
@@ -71,9 +72,11 @@ public class GroupVisual extends Visual {
         lerpedBuffer2 = new float[width]; 
         hc.createbox(250,hc.cubes1,-8000,-1000,30); 
         hc.createbox(100,hc.cubes2,-6000,-1000,1000); 
+
     }
-
-
+    
+    
+    
     public void draw() {
         background(0);
         calculateFrequencyBands();
@@ -87,7 +90,15 @@ public class GroupVisual extends Visual {
         {
             e.printStackTrace();
         }
+        m = millis() /1000;
+        for (int i = 0; i < mode.length; i++) {
+            if (m < mode[i]) {
+                visual = i;
+                break;
+            }
+        }
 
+        System.out.println(m);
         switch (visual) {
             case 0:
                 hw.render();
