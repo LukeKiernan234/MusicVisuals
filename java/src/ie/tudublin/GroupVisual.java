@@ -21,19 +21,18 @@ public class GroupVisual extends Visual {
     HaoCube hc = new HaoCube(this);
     LukeVisual lv = new LukeVisual(this); 
     LukeVisual2 lv2 = new LukeVisual2(this);
-    HaoWave hw = new HaoWave(this);
+    HaoWave hw = new HaoWave(this);     
 
     public void settings() {
-        //size(2560, 1440, P3D);
+        size(2560, 1430, P3D);
         println("CWD: " + System.getProperty("user.dir"));
-        fullScreen(P3D);
+        //fullScreen(P3D);
     }
 
     public void keyPressed() {
         if (key == ' ') {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
-            m = 0;
 
         }
         if (key == '1') {
@@ -95,7 +94,7 @@ public class GroupVisual extends Visual {
         //value store in mode array stands for the end time of each visual
         //end times stored in mode array are sorted in ascending order
         //compare current time to the end time of each visual until find a end time that is greater than current time
-        //then loop stops and the current index stands for the visual that should be displayed
+        //then loop stops and the current index stands for the visual that should be displayed 
         for (int i = 0; i < mode.length; i++) {
             if (m < mode[i]) {
                 visual = i;
