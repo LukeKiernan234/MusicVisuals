@@ -24,9 +24,9 @@ public class GroupVisual extends Visual {
     HaoWave hw = new HaoWave(this);     
 
     public void settings() {
-        size(2560, 1430, P3D);
+        //size(2560, 1430, P3D);
         println("CWD: " + System.getProperty("user.dir"));
-        //fullScreen(P3D);
+        fullScreen(P3D);
     }
 
     public void keyPressed() {
