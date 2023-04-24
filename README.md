@@ -75,10 +75,21 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - Integrating 2D and 3D objects into one scene. That took me a while to figure it out, but was a fun journey.
 - Working with a team for the first time and generally collaborating to solve problems. 
 - Finally, stepping up to lead the team, making sure that progress is being made and that project isn't done as a last minute effort.
-- Thanks for enduring me guys <3
+- Thanks for putting up with me me guys <3
 
 
 
-This is a youtube video:
+# Youtube video of the project
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](https://i3.ytimg.com/vi/CECjbCzzvYA/maxresdefault.jpg)](https://youtu.be/CECjbCzzvYA)
+
+
+<iframe 
+width="1903" 
+height="760" 
+src="https://www.youtube.com/embed/CECjbCzzvYA" 
+title="OOP 2023 Music Visualiser" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen>
+</iframe>
