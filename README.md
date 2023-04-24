@@ -82,14 +82,3 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 # Youtube video of the project
 
 [![YouTube](https://i3.ytimg.com/vi/CECjbCzzvYA/maxresdefault.jpg)](https://youtu.be/CECjbCzzvYA)
-
-
-<iframe 
-width="1903" 
-height="760" 
-src="https://www.youtube.com/embed/CECjbCzzvYA" 
-title="OOP 2023 Music Visualiser" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-allowfullscreen>
-</iframe>
