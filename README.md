@@ -66,6 +66,9 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 
 # What I am most proud of in the assignment
 
+## Hao Lin
+- Better understanding on OOP concpets
+- Implementation of cube's movement
 # Markdown Tutorial
 
 This is *emphasis*
