@@ -24,7 +24,7 @@ public class GroupVisual extends Visual {
     HaoWave hw = new HaoWave(this);
 
     public void settings() {
-        //size(1024, 768, P3D);Fg
+        //size(2560, 1440, P3D);
         println("CWD: " + System.getProperty("user.dir"));
         fullScreen(P3D);
     }
@@ -33,6 +33,7 @@ public class GroupVisual extends Visual {
         if (key == ' ') {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
+            m = 0;
 
         }
         if (key == '1') {
@@ -101,8 +102,6 @@ public class GroupVisual extends Visual {
                 break;
             }
         }
-
-        System.out.println(m);
         switch (visual) {
             case 0:
                 hw.render();
