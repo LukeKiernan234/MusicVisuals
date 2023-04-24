@@ -1,4 +1,6 @@
 # Music Visualiser Project
+# Youtube video of the project
+[![YouTube](https://i3.ytimg.com/vi/CECjbCzzvYA/maxresdefault.jpg)](https://youtu.be/CECjbCzzvYA)
 ---
 # Group Members
 | Name | Student Number |
@@ -79,6 +81,3 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 
 
 
-# Youtube video of the project
-
-[![YouTube](https://i3.ytimg.com/vi/CECjbCzzvYA/maxresdefault.jpg)](https://youtu.be/CECjbCzzvYA)
