@@ -38,7 +38,8 @@ public class HaoWave {
     offsetspeed = PApplet.map(gv.getSmoothedAmplitude(),0.05f,0.23f,0.01f,0.03f);
     color = PApplet.map(gv.getSmoothedAmplitude(),0.05f,0.23f,0,25);
     brightness = PApplet.map(gv.getSmoothedAmplitude(),0.05f,0.23f,100,255);
-
+    
+    //center circle calculation
     int size = gv.getAudioBuffer().size();
     float circlewidth = GroupVisual.map(gv.getSmoothedAmplitude(),0.05f,0.3f,20,60);
     float c = GroupVisual.map(gv.getSmoothedAmplitude(),0,0.23f,40,0);

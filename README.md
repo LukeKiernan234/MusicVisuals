@@ -16,8 +16,7 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 ---
 # Instructions
 - compile and run main.java from ie.tudublin package
-- press space bar to pause/play music
-- visualisatons can be changed by pressing 1, 2, 3, 4, 5, 6
+- press space bar to restart the track
 - **Notice** : visualisations will change automatically at certain parts of the track
 <!-- - Visualisations order: 
 	1 - hw 5 HaoWave 0:00 - 0:45,
