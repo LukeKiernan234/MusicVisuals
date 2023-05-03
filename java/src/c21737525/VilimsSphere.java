@@ -34,7 +34,6 @@ public class VilimsSphere extends Visual {
         gv.lights();
         gv.stroke(GroupVisual.map(gv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         gv.camera(0, 15, 300, 0, 0, 0, 0, 1, 0);
-        //gv.translate(0, 0, -250);
 
         rot += gv.getAmplitude() / 8.0f;
 

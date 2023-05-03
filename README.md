@@ -18,6 +18,9 @@ Visualisations are based on the music track from the movie "Trainspotting" by Un
 - compile and run main.java from ie.tudublin package
 - press space bar to restart the track
 - **Notice** : visualisations will change automatically at certain parts of the track
+- Track time - visualisations changes {31, 58, 76, 99, 167, 205, 300} seconds respectively
+- In order of appearance = {HaoWave, VilimsVisual, LukeVisual, HaoCube, LukeVisual2, HaoCube2, VilimSsphere}
+
 <!-- - Visualisations order: 
 	1 - hw 5 HaoWave 0:00 - 0:45,
 	2 - vv 0 VilimsVisual 0:45 - 1:10, 
